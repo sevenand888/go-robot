@@ -1,0 +1,15 @@
+#测试地址
+#这里输入企业微信机器人地址👇
+#webhook_url: "https://qyapi.weixin.qq.com/cgi-bin/webhook/*********"
+
+article_source: "local"
+local_article_path: "articles/"
+log_path: "logs/"  # 新增日志目录配置
+
+deepseek:
+#这里输入deepseek的api，去官网买10块钱本软件能用一年
+  api_key: "sk-****************a"
+  model: "deepseek-chat"
+  api_base: "https://api.deepseek.com/v1"
+  temperature: 0.8
+  max_tokens: 800

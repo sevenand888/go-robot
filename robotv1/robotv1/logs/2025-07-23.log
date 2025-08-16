@@ -1,0 +1,19 @@
+ROBOT: 2025/07/23 09:00:01 main.go:27: ======= 机器人服务启动 =======
+ROBOT: 2025/07/23 09:00:01 main.go:33: 当前配置: 文章源=local, 本地文章路径=articles/
+ROBOT: 2025/07/23 09:00:01 main.go:48: 尝试获取本地文章...
+ROBOT: 2025/07/23 09:00:01 main.go:55: 本地文章为空: 20250723.md
+ROBOT: 2025/07/23 09:00:01 main.go:62: 尝试使用 DeepSeek 生成文章...
+ROBOT: 2025/07/23 09:00:01 deepseek_generator.go:33: 🚀 开始生成文章: 模型=deepseek-chat, 温度=0.8
+ROBOT: 2025/07/23 09:00:01 deepseek_generator.go:83: 📤 发送请求到DeepSeek API，主题: 《AI提示词工程》
+ROBOT: 2025/07/23 09:00:03 deepseek_generator.go:108: ✅ 请求成功! 状态码: 200
+ROBOT: 2025/07/23 09:00:03 deepseek_generator.go:109: ⏱️ 耗时: 1.336885258s
+ROBOT: 2025/07/23 09:00:27 deepseek_generator.go:132: 🔄 解析API响应
+ROBOT: 2025/07/23 09:00:27 deepseek_generator.go:172: 💾 文章保存成功: articles/20250723.md
+ROBOT: 2025/07/23 09:00:27 deepseek_generator.go:173: 📝 标题: 🚀AI提示词工程：你的数字火箭燃料！
+ROBOT: 2025/07/23 09:00:27 main.go:82: 成功获取文章, 内容长度: 1814 字符
+ROBOT: 2025/07/23 09:00:27 main.go:86: 开始发送消息到企业微信...
+ROBOT: 2025/07/23 09:00:27 robot.go:82: 发送企业微信卡片消息, 标题: 🚀AI提示词工程：你的数字火箭燃料！
+ROBOT: 2025/07/23 09:00:27 robot.go:83: 消息包含 3 个链接
+ROBOT: 2025/07/23 09:00:27 robot.go:111: 消息发送成功
+ROBOT: 2025/07/23 09:00:27 main.go:91: 推送成功！
+ROBOT: 2025/07/23 09:00:27 main.go:92: ======= 机器人服务完成 =======
