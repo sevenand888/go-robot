@@ -18,3 +18,22 @@
 
 实现项目目录的articles和下载链接里面的http://网址:8080/articles同步的关键：lsyncd，下面是配置文件
 <img width="1188" height="678" alt="image" src="https://github.com/user-attachments/assets/477998a9-ea3f-4e25-b85f-d7cbdcc82233" />
+
+保证点击下载链接触发下载动作，而不是触发预览（预览会乱码）
+nginx配置：
+location ~* \.md$ {
+    # 强制所有 .md 文件作为附件下载
+    add_header Content-Disposition "attachment";
+    
+    # 可选：防止浏览器尝试渲染文本
+    add_header Content-Type "application/octet-stream";
+}
+
+apache（httpd）配置：
+<FilesMatch "\.md$">
+    # 强制下载
+    Header set Content-Disposition "attachment"
+
+    # 可选：禁用文本渲染
+    Header set Content-Type "application/octet-stream"
+</FilesMatch>
